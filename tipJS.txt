@@ -1,0 +1,59 @@
+let fruits = ['banana', 'apple', 'orange', 'watermelon', 'apple','orange', 'watermelon', 'apple']
+var setarr=Array.from(new Set(fruits));
+console.log(setarr);
+
+let fruits2 = ['banana', 'apple', 'orange', 'watermelon', 'apple','orange', 'watermelon', 'apple']
+var converttoob = {...fruits2}
+console.log(converttoob);
+console.log("---------------------")
+let numOne = [0, 2, 4, 6, 8, 8];
+var nn = new Set(numOne)
+console.log(nn);
+console.log("Find same number list")
+let numOne1 = [0, 2, 4, 6, 8, 8,1];
+let numTwo2 = [1, 2, 3, 4, 5, 6,8,0];
+let findSameNumb =Array.from(new Set(numOne1)).filter((itemsame,index)=>{
+  return numTwo2.includes(itemsame)
+})
+console.log(findSameNumb)
+console.log("---------------------")
+console.log("flat array from deep array available")
+var deepArr =[1,2,3,[4,5,6],7,8,9];
+var flatArr = deepArr.reduce((arrFlat,originArr,index)=>{
+  return arrFlat.concat(originArr)
+},[])
+console.log(flatArr)
+console.log("---------------------------")
+
+var arrA=[1,2,3,4,5,6]
+function totalArr(arrA){
+  var total =0;
+  for(var param of arrA ){
+      
+       total += param;
+  }
+  console.log(total)
+}
+totalArr(arrA);
+console.log("---------------------------")
+var obj ={
+  id:2,
+  n:"ntv",
+  t:"it",
+  v:"dev"
+}
+for(var pr in obj){
+    console.log(obj[pr])
+}
+console.log("---------------------------")
+var numbObj =[1,2,5,4,6,8,9,6,7,3]
+// for(var no in numbObj){
+//   console.log(no)
+// }
+console.log("---------------------------")
+var numbObj2 =[1,2,5,4,6,8,9,6,7,3]
+console.log(numbObj2.includes(3));
+console.log("---------------------------")
+var obj3=[12,31,4,5,4,45,3,2,1,1,2,6,8]
+var flatobj = Array.from(new Set(obj3))
+console.log(flatobj)
