@@ -57,3 +57,32 @@ console.log("---------------------------")
 var obj3=[12,31,4,5,4,45,3,2,1,1,2,6,8]
 var flatobj = Array.from(new Set(obj3))
 console.log(flatobj)
+
+////////// flat array available
+
+var a=[2,4,5,3,'a',[1,2,4],[6,9,8,'b']]
+var flatA = a.reduce((firstA,LastA)=>{
+  return firstA.concat(LastA)
+},[])
+console.log(flatA)
+
+question group frontEnd that i answer
+function diffA(...a){
+  var hdla= a.reduce((firstA,lastA)=>{
+    return firstA.concat(lastA)
+  },[])
+  console.log(hdla)
+  var target = Array.from(new Set(hdla))
+  console.log(target)
+}
+diffA([1,2,3],['a',2,4],[2,'a',8,9])
+
+const diffArray = (...params) => {
+const result = []
+params.forEach((param) => {
+param.forEach((item) => {
+if (!result.includes(item)) result.push(item)
+})
+})
+return result
+}
